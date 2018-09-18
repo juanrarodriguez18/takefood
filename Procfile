@@ -1,1 +1,1 @@
-web: gunicorn takeAdvantageOfYourFoodmanage.wsgi:application
+web: gunicorn takeAdvantageOfYourFood.wsgi:application
