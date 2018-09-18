@@ -3,4 +3,4 @@ applications:
   memory: 256MB
   instances: 1
   buildpack: python_buildpack
-  command: python takeAdvantageOfYourFood/manage.py runserver
+  command: python manage.py collectstatic --noinput && python takeAdvantageOfYourFood/manage.py runserver
