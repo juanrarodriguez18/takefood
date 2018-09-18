@@ -3,4 +3,4 @@ applications:
   memory: 256MB
   instances: 1
   buildpack: python_buildpack
-  command: python takeAdvantageOfYourFood/manage.py collectstatic --noinput && gunicorn takeAdvantageOfYourFood.wsgi:application
+  command: python takeAdvantageOfYourFood/manage.py collectstatic --noinput && cd takeAdvantageOfYourFood && gunicorn takeAdvantageOfYourFood.wsgi:application

@@ -1,1 +1,1 @@
-web: gunicorn takeAdvantageOfYourFood.wsgi:application
+web: cd takeAdvantageOfYourFood && gunicorn takeAdvantageOfYourFood.wsgi:application
