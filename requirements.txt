@@ -1,2 +1,2 @@
-django
+django==2.1
 watson-developer-cloud>=1.7.0
