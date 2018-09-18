@@ -1,0 +1,6 @@
+applications:
+- name: takefood
+  memory: 512M
+  instances: 1
+  buildpack: python_buildpack
+  command: gunicorn takefood.wsgi:application
