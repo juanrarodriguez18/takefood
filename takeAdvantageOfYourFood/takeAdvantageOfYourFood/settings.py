@@ -41,7 +41,7 @@ SECRET_KEY = '-b&&yhky&)#wiio2bnvn)jf&1%1ew+0ac6uomcx&m_9@0ysm)a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
