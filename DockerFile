@@ -1,7 +1,7 @@
 FROM python:3.6-alpine
 LABEL maintainer="@juanrarodriguez18 <juanrarodriguez18@gmail.com>"
 
-WORKDIR /usr/src/bot
+WORKDIR /usr/src/takeFood
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
