@@ -24,5 +24,5 @@ You can change the ip and port `0.0.0.0: 8000` with the ip and port that you nee
 Para lanzarlo desde Docker usaremos los siguientes comandos:
 
 ```bat
-docker build --rm -f Dockerfile -t takeFood:latest .
-docker run -d -p 8000:8000 --name TakeAdvantageOfYourFood --restart always takeFood:latest
+docker build --rm -f Dockerfile -t takefood:latest .
+docker run -d -p 8000:8000 --name TakeAdvantageOfYourFood --restart always takefood:latest
