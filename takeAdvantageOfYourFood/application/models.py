@@ -34,7 +34,7 @@ class Recipe(models.Model):
 
 class Ingredient(models.Model):
     ingredient_name = models.CharField(max_length=100)
-    recpie = models.ForeignKey(Recipe, on_delete=models.CASCADE, blank=True, null=True)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, blank=True, null=True)
 
     def __unicode__(self):
         return self.ingredient_name

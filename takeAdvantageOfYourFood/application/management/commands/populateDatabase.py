@@ -3,7 +3,6 @@
 from django.core.management.base import BaseCommand
 from django.db import transaction
 from application.models import Recipe, Ingredient
-from django.db.models import Count
 import csv
 
 class Command(BaseCommand):
@@ -51,7 +50,7 @@ class Command(BaseCommand):
 
     """
     ingredient_name = models.CharField(max_length=100)
-    recpie = models.ForeignKey(Recipe, on_delete=models.CASCADE, blank=True, null=True)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, blank=True, null=True)
     """
     @transaction.atomic
     def populateIngredients(self):
@@ -63,7 +62,7 @@ class Command(BaseCommand):
         Ingredient.objects.all().delete()
         for ingredient in ingredients:
             if i != 0:
-                Ingredient.objects.get_or_create(ingredient_name= ingredient[1], recpie = Recipe.objects.get(recipe_id= ingredient[0]))
+                Ingredient.objects.get_or_create(ingredient_name= ingredient[1], recipe = Recipe.objects.get(recipe_id= ingredient[0]))
             i += 1
 
         fichero_csv[1].close()
