@@ -79,16 +79,14 @@
 }
 
 .titlePrincipal{
-	text-shadow: 1px 2px #999;
+    text-shadow: 1px 2px #999;
+    margin-bottom: 30px;
 }
 
 .titlePrincipal h1{
 	font-size: 400%;
 	margin-top: auto;
 	text-shadow: 1px 2px #999;
-}
-#headerwrap h4{
-	color: white;
 }
 
 /*	Importante! Fijando menu de arriba */
