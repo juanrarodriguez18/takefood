@@ -14,7 +14,7 @@ For deploy the App from Python, we should use the next commands:
 
 ```bat
 pip install -r requirements.txt
-python takeAdvantageOfYourFood/manage.py runserver 0.0.0.0:8000
+python takeAdvantageOfYourFood/manage.py runserver 0.0.0.0:8000 --nostatic
 ```
 
 You can change the ip and port `0.0.0.0: 8000` with the ip and port that you need.

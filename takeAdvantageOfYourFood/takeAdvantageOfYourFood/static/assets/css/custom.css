@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'Aero';
+	src: url('../fonts/Aero.ttf');
+}
+
+.navbar {
+	min-height: 70px;
+	padding-top: 10px;
+	margin-bottom: 0px;
+}
+
+.navbar-brand {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+}
+
+.navbar-header .navbar-brand {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #00b3fe;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #00b3fe;
+	background-color: transparent;
+}
+
+.navbar-default {
+	background-color: #223B58;
+	border-color: transparent;
+}
+
+.navbar-collapse {
+    max-height: none ! important;
+  }
+
+.logoTakeFood {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+    /* position: absolute;*/
+}
+.navbar-brand {
+    font-family: Aero;
+    font-size: 25px;
+}
