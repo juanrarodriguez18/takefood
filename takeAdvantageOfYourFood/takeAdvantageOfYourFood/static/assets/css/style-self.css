@@ -1,12 +1,6 @@
 /*	################################################################
 	1. GENERAL STRUCTURES
 ################################################################# */
-@font-face
-{
- font-family: 'Aero';
- src: url('../fonts/Aero.ttf');
-}
-
 .button-ok{
     color: #fff;
     background-color: #428bca;
