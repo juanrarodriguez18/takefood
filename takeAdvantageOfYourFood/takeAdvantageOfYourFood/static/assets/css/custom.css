@@ -105,3 +105,36 @@
 	  height: 100px;
 	  float: left;
   }
+
+  .recipe-container img {
+    box-shadow: 0 0px 5px rgba(0,0,0,0.25), 0 0px 5px rgba(0,0,0,0.22);
+	  margin: 10px 0 10px 20px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .recipe-container h3 {
+    margin-top: 15px;
+    text-align: left;
+  }
+
+  .recipe-container h4 {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .recipe-container .easeOfPrep {
+    width: 19%;
+  }
+
+  .recipe-container .easeOfPrepValue {
+    margin-top: -2px;
+  }
+
+  .recipe-container .ingredientsList {
+    margin-left: 20px;
+  }
+
+  .recipe-container .ingredientDiv {
+    height: 35px;
+  }
