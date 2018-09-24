@@ -38,4 +38,5 @@ urlpatterns = [
     path('', views.test),
     path('example1', views.example1),
     path('example2', views.example2),
+    path(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 ]
