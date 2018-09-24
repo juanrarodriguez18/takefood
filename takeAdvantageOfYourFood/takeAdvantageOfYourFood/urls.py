@@ -41,7 +41,3 @@ urlpatterns = [
     path('example1', views.example1),
     path('example2', views.example2),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    print(settings.STATIC_ROOT)
