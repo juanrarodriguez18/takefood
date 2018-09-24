@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+{% load static %}
+
+<style>
+.recipe-container img{
+  width:130px;
+  height: 130px;
+}
+
+.recipe-container h3{
+  margin-top: 15px;
+}
+
+.recipe-container h4{
+  margin-top: 20px;
+  text-align: left;
+}
+</style>
+<div id="headerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <div class="titlePrincipal">
+                    <h2>Welcome to your favorite recipe searcher!</h2>
+                </div>
+                <div class="card recipe-container">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="card-images col-5 col-sm-2">
+                            <a target="_blank" href="{% static 'ingredientsImages/18/1.jpg' %}"><img src="{% static 'ingredientsImages/18/1.jpg' %}"></a>
+                        </div>
+                        <h3 class="col-5 col-sm-1">Name:</h3><h4 class="col-5 col-sm-2">Test recipe</h4>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

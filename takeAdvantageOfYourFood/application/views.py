@@ -31,3 +31,17 @@ def example1(request):
     
 def example2(request):
     None
+
+def get_recipe(request, recipe_id):
+    print(recipe_id)
+    if request.method == 'GET':
+        try:
+
+            recipe = Recipe.objects.get(recipe_id= recipe_id)
+            ingredients = Ingredient.objects.filter(recipe=recipe)
+
+        except:
+            recipe = None
+            ingredients = None
+
+        return render(request, 'recipe.html', {'recipe': recipe, 'ingredients': ingredients})

@@ -40,4 +40,5 @@ urlpatterns = [
     path('', views.test),
     path('example1', views.example1),
     path('example2', views.example2),
+    path('recipe/<int:recipe_id>', views.get_recipe)
 ]
