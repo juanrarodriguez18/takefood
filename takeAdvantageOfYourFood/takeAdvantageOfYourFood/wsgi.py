@@ -26,7 +26,10 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from whitenoise import WhiteNoise
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'takeAdvantageOfYourFood.settings')
 
 application = get_wsgi_application()
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+application = WhiteNoise(application, root=os.path.join(PROJECT_DIR, 'static'))
