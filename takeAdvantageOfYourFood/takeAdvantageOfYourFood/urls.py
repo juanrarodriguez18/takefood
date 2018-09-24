@@ -31,8 +31,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf import settings
-from django.conf.urls.static import static
 from application import views
 
 urlpatterns = [
@@ -41,7 +39,3 @@ urlpatterns = [
     path('example1', views.example1),
     path('example2', views.example2),
 ]
-
-urlpatterns += patterns('',
- (r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
- )
