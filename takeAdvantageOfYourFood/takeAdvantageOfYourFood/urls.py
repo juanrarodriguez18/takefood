@@ -31,7 +31,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 from application import views
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -39,3 +41,7 @@ urlpatterns = [
     path('example1', views.example1),
     path('example2', views.example2),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    print(settings.STATIC_ROOT)
