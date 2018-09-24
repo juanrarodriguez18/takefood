@@ -25,3 +25,9 @@ from application.models import Recipe, Ingredient
 def test(request):
     if request.method == 'GET':
         return render(request, 'homePage.html')
+        
+def example1(request):
+    None
+    
+def example2(request):
+    None

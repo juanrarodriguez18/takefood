@@ -36,4 +36,6 @@ from application import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.test),
+    path('example1', views.example1),
+    path('example2', views.example2),
 ]
