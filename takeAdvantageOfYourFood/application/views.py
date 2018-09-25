@@ -30,14 +30,14 @@ def test(request):
         return render(request, 'homePage.html')
         
 def example1(request):
-    images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'IngredientsImages')
+    images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'ingredientsImages')
     user_id = '18'
     recipe = watson_dir_search(images_path, user_id)[0]
 
     return get_recipe(request, recipe.recipe_id)
     
 def example2(request):
-    images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'IngredientsImages')
+    images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'ingredientsImages')
     user_id = '32'
     recipe = watson_dir_search(images_path, user_id)[0]
 

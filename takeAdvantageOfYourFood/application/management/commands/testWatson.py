@@ -32,7 +32,7 @@ class Command(BaseCommand):
 			iam_apikey=os.environ.get('WATSON_API_KEY'))
 		
 		user_id = '18'
-		images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'IngredientsImages', user_id)
+		images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'ingredientsImages', user_id)
 		images_files = [f for f in listdir(images_path) if isfile(join(images_path, f))]
 		#print(images_files)
 		ingredients_results = self.get_watson_ingredients_results(visual_recognition, images_path, images_files)
