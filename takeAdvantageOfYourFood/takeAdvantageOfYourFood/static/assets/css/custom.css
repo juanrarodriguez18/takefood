@@ -145,3 +145,7 @@
 		text-align: right !important;
 	}
 }
+
+.recipe-list .list-header {
+	margin-top: 30px;
+}

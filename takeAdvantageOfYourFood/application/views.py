@@ -56,3 +56,8 @@ def get_recipe(request, recipe_id):
             ingredients = None
 
         return render(request, 'recipe.html', {'recipe': recipe, 'ingredients': ingredients})
+
+def list_recipe(request):
+    recipes = Recipe.objects.all()
+
+    return render(request, 'recipes.html', {'recipes': recipes})
