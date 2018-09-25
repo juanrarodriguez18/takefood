@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/style-self.css' %}" type="text/css">
     <script type="text/javascript" src="{% static 'assets/js/jquery.min.js' %}"></script>
     <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-    <!-- <link rel="shortcut icon" href="/static/images/favicon.ico"> -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
 
 </head>
 
@@ -39,7 +39,7 @@
                 <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#" class="pull-left logoImg"><img src="" alt="logo"></a> 
+            <a href="/" class="pull-left logoImg"><img src="{% static 'images/Logo.jpg' %}" alt="logo"></a> 
             <a class="logoLetras navbar-brand" href="/">TakeAdvantageOfYourFood</a>
 
         </div>

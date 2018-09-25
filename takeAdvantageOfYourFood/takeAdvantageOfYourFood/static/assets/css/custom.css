@@ -57,6 +57,11 @@
 	padding-right: 20px;
 }
 
+.logoImg img {
+	width: 50px;
+    border-radius: 50%;
+}
+
 .card {
 	background: #fff;
 	border-radius: 2px;
