@@ -1,4 +1,4 @@
-# takefood
+# TakeFood
 Take advantage of your food!
 
 ## Deploying the App
