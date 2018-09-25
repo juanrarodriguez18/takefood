@@ -140,6 +140,10 @@
 	height: 35px;
 }
 
+.ingredientDiv ul {
+	list-style-type: none !important;
+}
+
 @media (min-width: 1000px) {
 	.recipe-container .second-column-title h3 {
 		text-align: right !important;

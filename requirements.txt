@@ -3,3 +3,5 @@ watson-developer-cloud>=1.7.0
 gunicorn
 whitenoise
 django-dotenv
+beautifulsoup4
+requests

@@ -22,6 +22,7 @@ from django.shortcuts import render_to_response
 
 from application.models import Recipe, Ingredient
 from application.watsonSearcher import watson_dir_search
+from application.youtubeSearcher import search_youtube_video
 
 
 # Create your views here.
@@ -50,12 +51,13 @@ def get_recipe(request, recipe_id):
 
             recipe = Recipe.objects.get(recipe_id= recipe_id)
             ingredients = Ingredient.objects.filter(recipe=recipe)
+            youtube_link = search_youtube_video(recipe.name)
 
         except:
             recipe = None
             ingredients = None
 
-        return render(request, 'recipe.html', {'recipe': recipe, 'ingredients': ingredients})
+        return render(request, 'recipe.html', {'recipe': recipe, 'ingredients': ingredients, 'youtube_link': youtube_link})
 
 def list_recipe(request):
     recipes = Recipe.objects.all()

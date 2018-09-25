@@ -64,14 +64,16 @@
                 <h3 class="ingredientsList">- Ingredients:</h3>
               </div>
             </div>
-            <div class="row">
-                <ul>
+            <div class="row ingredientDiv">
+                <ul class="col-md-7">
                 {% for ingredient in ingredients %}
-                  <div class="col-md-12 ingredientDiv">
-                      <li><h4 class="ingredientsList">{{ingredient.ingredient_name}}</h4></li>
-                  </div>
+                  <li><h4 class="ingredientsList">•  {{ingredient.ingredient_name}}</h4></li>
                 {% endfor %}
                 </ul>
+                <div class="col-md-3">
+                    <iframe width="300" height="170" src="{{youtube_link}}">
+                    </iframe>
+                </div>
             </div>
           </div>
         </div>
