@@ -67,75 +67,81 @@
 	position: relative;
 	width: 100%;
 	box-shadow: 0 10px 28px rgba(0,0,0,0.25), 0 0px 10px rgba(0,0,0,0.22);
-  }
+}
   
-  .card-title {
-	  text-shadow: 1px 1px #999;
-	  margin: 15px 0 10px 20px;
-	  text-align: left;
-  }
-  
-  .card-text {
-	  margin: 30px 10px 10px 20px;
-	  text-align: left;
-  }
-  
-  .card-body .btn{
-	  margin: 15px 0 10px 20px;
-	  display: block;
-	  width: 80px;
-  }
-  
-  .card-second-title {
-	  text-shadow: 0.5px 1px #999;
-	  margin: 25px 0 15px 20px;
-	  text-align: left;
-  }
-  
-  .card-images img {
-	  box-shadow: 0 0px 5px rgba(0,0,0,0.25), 0 0px 5px rgba(0,0,0,0.22);
-	  width: 100px;
-	  height: 100px;
-	  margin: 10px 0 10px 20px;
-	  float: left;
-  }
-  
-  .card-images img:hover {
-	  box-shadow: 0 10px 15px rgba(0,0,0,0.25), 0 0px 15px rgba(0,0,0,0.22);
-	  width: 100px;
-	  height: 100px;
-	  float: left;
-  }
+.card-title {
+	text-shadow: 1px 1px #999;
+	margin: 15px 0 10px 20px;
+	text-align: left;
+}
 
-  .recipe-container img {
-    box-shadow: 0 0px 5px rgba(0,0,0,0.25), 0 0px 5px rgba(0,0,0,0.22);
-	  margin: 10px 0 10px 20px;
-    width: 130px;
-    height: 130px;
-  }
+.card-text {
+	margin: 30px 10px 10px 20px;
+	text-align: left;
+}
 
-  .recipe-container h3 {
-    margin-top: 15px;
-    text-align: left;
-  }
+.card-body .btn{
+	margin: 15px 0 10px 20px;
+	display: block;
+	width: 80px;
+}
 
-  .recipe-container h4 {
-    margin-top: 20px;
-    text-align: left;
-  }
+.card-second-title {
+	text-shadow: 0.5px 1px #999;
+	margin: 25px 0 15px 20px;
+	text-align: left;
+}
 
-  .recipe-container .easeOfPrep {
-    width: 19%;
-  }
+.card-images img {
+	box-shadow: 0 0px 5px rgba(0,0,0,0.25), 0 0px 5px rgba(0,0,0,0.22);
+	width: 100px;
+	height: 100px;
+	margin: 10px 0 10px 20px;
+	float: left;
+}
 
-  .recipe-container .easeOfPrepValue {
-    margin-top: -2px;
-  }
+.card-images img:hover {
+	box-shadow: 0 10px 15px rgba(0,0,0,0.25), 0 0px 15px rgba(0,0,0,0.22);
+	width: 100px;
+	height: 100px;
+	float: left;
+}
 
-  .recipe-container .ingredientsList {
-    margin-left: 20px;
-  }
+.recipe-container img {
+	box-shadow: 0 0px 5px rgba(0,0,0,0.25), 0 0px 5px rgba(0,0,0,0.22);
+	margin: 10px 0 10px 20px;
+	width: 130px;
+	height: 130px;
+}
 
-  .recipe-container .ingredientDiv {
-    height: 35px;
-  }
+.recipe-container h3 {
+	margin-top: 15px;
+	text-align: left;
+}
+
+.recipe-container h4 {
+	margin-top: 20px;
+	text-align: left;
+}
+
+.recipe-container .easeOfPrep {
+	width: 19%;
+}
+
+.recipe-container .easeOfPrepValue {
+	margin-top: -2px;
+}
+
+.recipe-container .ingredientsList {
+	margin-left: 20px;
+}
+
+.recipe-container .ingredientDiv {
+	height: 35px;
+}
+
+@media (min-width: 1000px) {
+	.recipe-container .second-column-title h3 {
+		text-align: right !important;
+	}
+}
