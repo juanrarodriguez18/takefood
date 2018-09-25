@@ -14,19 +14,25 @@
 #
 #     You should have received a copy of the GNU General Public License
 #     along with TakeAdvantageOfFood.  If not, see <http:#www.gnu.org/licenses/>.
+import json
+import os
+from os import listdir
+from os.path import isfile, join
 
 from watson_developer_cloud import VisualRecognitionV3
 from application.models import Recipe, Ingredient
 
-def testWatson(images_path, user_id):
+def watson_dir_search(images_path, user_id):
 	visual_recognition = VisualRecognitionV3(
 		'2018-03-19',
 		url='https://gateway.watsonplatform.net/visual-recognition/api',
 		iam_apikey=os.environ.get('WATSON_API_KEY'))
 	
+	result = []
+	images_path = os.path.join(images_path, user_id)
 	images_files = [f for f in listdir(images_path) if isfile(join(images_path, f))]
 	#print(images_files)
-	ingredients_results = self.get_watson_ingredients_results(visual_recognition, images_path, images_files)
+	ingredients_results = get_watson_ingredients_results(visual_recognition, images_path, images_files)
 	print(ingredients_results)
 
 	recipes = Recipe.objects.filter(ingredients_quantity= len(ingredients_results))
@@ -41,8 +47,11 @@ def testWatson(images_path, user_id):
 					break
 		if len(ingredients_results) == i:
 			print("{\"ID\": "+str(recipe.recipe_id)+", \"Name\": \""+recipe.name+"\"}")
+			result.append(recipe)
 
-def get_watson_ingredients_results(self, visual_recognition, images_path, images_files):
+	return result
+	
+def get_watson_ingredients_results(visual_recognition, images_path, images_files):
 	ingredients_results = []
 
 	for image_file in images_files:
@@ -63,4 +72,4 @@ def get_watson_ingredients_results(self, visual_recognition, images_path, images
 			#print(ingredient_results)
 			ingredients_results.append(ingredient_results)
     
-    return ingredients_results
+	return ingredients_results

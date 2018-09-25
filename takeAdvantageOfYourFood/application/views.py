@@ -14,11 +14,14 @@
 #
 #     You should have received a copy of the GNU General Public License
 #     along with TakeAdvantageOfFood.  If not, see <http:#www.gnu.org/licenses/>.
+import os
+
 from django.core.paginator import Paginator
 from django.shortcuts import render
 from django.shortcuts import render_to_response
 
 from application.models import Recipe, Ingredient
+from application.watsonSearcher import watson_dir_search
 
 
 # Create your views here.
@@ -27,10 +30,18 @@ def test(request):
         return render(request, 'homePage.html')
         
 def example1(request):
-    None
+    images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'IngredientsImages')
+    user_id = '18'
+    recipe = watson_dir_search(images_path, user_id)[0]
+
+    return get_recipe(request, recipe.recipe_id)
     
 def example2(request):
-    None
+    images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'IngredientsImages')
+    user_id = '32'
+    recipe = watson_dir_search(images_path, user_id)[0]
+
+    return get_recipe(request, recipe.recipe_id)
 
 def get_recipe(request, recipe_id):
     print(recipe_id)
