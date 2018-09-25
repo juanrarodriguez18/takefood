@@ -60,8 +60,9 @@
 .card {
 	background: #fff;
 	border-radius: 2px;
+	padding-bottom: 20px;
 	display: inline-block;
-	height: 360px;
+	min-height: 250px;
 	margin: 1rem 1rem 1.5rem 1rem;
 	position: relative;
 	width: 100%;
