@@ -1,5 +1,5 @@
 Recipe No,Ingredient
-1,Vegetarian
+1,Vegetables
 1,Beans
 1,Noodles
 2,Chicken
@@ -90,12 +90,12 @@ Recipe No,Ingredient
 48,Noodles
 48,Marinara Sauce
 49,Rice
-49,Vegetarian
+49,Vegetables
 49,Beans
 49,Eggs
-50,Vegetarian
+50,Vegetables
 50,Potatoes
-51,Vegetarian
+51,Vegetables
 52,Milk
 52,Eggs
 52,Corn Meal
@@ -117,11 +117,11 @@ Recipe No,Ingredient
 63,Milk
 64,Turkey
 65,Lentils
-65,Vegetarian
+65,Vegetables
 65,Carrots
 65,Onion
 66,Buckwheat
-66,Vegetarian
+66,Vegetables
 66,Carrots
 66,Onion
 67,Rice
@@ -129,7 +129,7 @@ Recipe No,Ingredient
 67,Onion
 68,Lentils
 68,Onion
-68,Vegetarian
+68,Vegetables
 69,Potatoes
 69,Chicken
 69,Carrots
