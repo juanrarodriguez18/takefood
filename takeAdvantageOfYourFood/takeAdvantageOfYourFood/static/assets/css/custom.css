@@ -149,6 +149,14 @@
 	list-style-type: none !important;
 }
 
+.ingredient-list img {
+	width: 300px;
+}
+
+.ingredient-list .ingredient-grid{
+	margin-top: 20px;
+}
+
 @media (min-width: 1000px) {
 	.recipe-container .second-column-title h3 {
 		text-align: right !important;

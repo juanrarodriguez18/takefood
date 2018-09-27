@@ -63,3 +63,8 @@ def list_recipe(request):
     recipes = Recipe.objects.all()
 
     return render(request, 'recipes.html', {'recipes': recipes})
+
+def list_ingredient(request):
+    ingredients = Ingredient.objects.all()
+
+    return render(request, 'ingredients.html', {'ingredients': ingredients})
