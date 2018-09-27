@@ -16,12 +16,12 @@
                   {% for ingredient in ingredients %}
                       <div class="col-md-4">
                         <div class="row">
-                          <a target="_blank" href="{% static 'images/ingredients/'|add:ingredient.ingredient_name|add:'.jpg' %}">
-                            <img src="{% static 'images/ingredients/'|add:ingredient.ingredient_name|add:'.jpg' %}">
+                          <a target="_blank" href="{% static 'images/ingredients/'|add:ingredient|add:'.jpg' %}">
+                            <img src="{% static 'images/ingredients/'|add:ingredient|add:'.jpg' %}">
                           </a>
                         </div>
                         <div class="row">
-                          <h4>{{ingredient.ingredient_name}}</h4>
+                          <h4>{{ingredient}}</h4>
                         </div>
                       </div>
                   {% endfor %}

@@ -66,5 +66,10 @@ def list_recipe(request):
 
 def list_ingredient(request):
     ingredients = Ingredient.objects.all()
+    result = []
 
-    return render(request, 'ingredients.html', {'ingredients': ingredients})
+    for ingredient in ingredients:
+        if ingredient.ingredient_name and ingredient.ingredient_name not in result:
+            result.append(ingredient.ingredient_name)
+
+    return render(request, 'ingredients.html', {'ingredients': result})
