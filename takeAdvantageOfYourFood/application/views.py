@@ -33,16 +33,16 @@ def test(request):
 def example1(request):
     images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'ingredientsImages')
     user_id = '18'
-    recipe = watson_dir_search(images_path, user_id)[0]
+    recipes = watson_dir_search(images_path, user_id)
 
-    return get_recipe(request, recipe.recipe_id)
+    return render(request, 'recipes.html', {'recipes': recipes})
     
 def example2(request):
     images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'ingredientsImages')
     user_id = '32'
-    recipe = watson_dir_search(images_path, user_id)[0]
+    recipes = watson_dir_search(images_path, user_id)
 
-    return get_recipe(request, recipe.recipe_id)
+    return render(request, 'recipes.html', {'recipes': recipes})
 
 def get_recipe(request, recipe_id):
     print(recipe_id)

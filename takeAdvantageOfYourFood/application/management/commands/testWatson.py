@@ -38,7 +38,7 @@ class Command(BaseCommand):
 		ingredients_results = self.get_watson_ingredients_results(visual_recognition, images_path, images_files)
 		print(ingredients_results)
 
-		recipes = Recipe.objects.filter(ingredients_quantity= len(ingredients_results))
+		recipes = Recipe.objects.filter(ingredients_quantity__lte= len(ingredients_results))
 		#print(recpies[0].name)
 
 		for recipe in recipes:
@@ -48,7 +48,7 @@ class Command(BaseCommand):
 					if len(Ingredient.objects.filter(recipe= recipe, ingredient_name__contains= ingredient)) != 0:
 						i += 1
 						break
-			if len(ingredients_results) == i:
+			if recipe.ingredients_quantity == i:
 				print("{\"ID\": "+str(recipe.recipe_id)+", \"Name\": \""+recipe.name+"\"}")
 
 	def get_watson_ingredients_results(self, visual_recognition, images_path, images_files):
