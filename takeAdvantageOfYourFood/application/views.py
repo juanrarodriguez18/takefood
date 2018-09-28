@@ -21,8 +21,9 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response
 
 from application.models import Recipe, Ingredient
-from application.watsonSearcher import watson_dir_search
+from application.watsonSearcher import watson_dir_search, watson_upload_search
 from application.youtubeSearcher import search_youtube_video
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -32,15 +33,15 @@ def test(request):
         
 def example1(request):
     images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'ingredientsImages')
-    user_id = '18'
-    recipes = watson_dir_search(images_path, user_id)
+    exapmle_id = '18'
+    recipes = watson_dir_search(images_path, exapmle_id)
 
     return render(request, 'recipes.html', {'recipes': recipes})
     
 def example2(request):
     images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'ingredientsImages')
-    user_id = '32'
-    recipes = watson_dir_search(images_path, user_id)
+    exapmle_id = '32'
+    recipes = watson_dir_search(images_path, exapmle_id)
 
     return render(request, 'recipes.html', {'recipes': recipes})
 
@@ -73,3 +74,11 @@ def list_ingredient(request):
             result.append(ingredient.ingredient_name)
 
     return render(request, 'ingredients.html', {'ingredients': result})
+
+def Form(request):
+    return render(request, "form.html")
+
+def Upload(request):
+    recipes = watson_upload_search(request.FILES.getlist("files"))
+
+    return render(request, 'recipes.html', {'recipes': recipes})

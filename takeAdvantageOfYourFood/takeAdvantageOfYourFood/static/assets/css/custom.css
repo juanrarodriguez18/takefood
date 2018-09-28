@@ -158,12 +158,21 @@
 	margin-top: 20px;
 }
 
+.recipe-list .list-header {
+	margin-top: 30px;
+}
+
+.upload-ingredients {
+	margin: 25px 0 10px 20px;
+}
+
+.upload-button {
+	margin-top: 25px !important;
+	width: 130px !important;
+}
+
 @media (min-width: 1000px) {
 	.recipe-container .second-column-title h3 {
 		text-align: right !important;
 	}
-}
-
-.recipe-list .list-header {
-	margin-top: 30px;
 }
