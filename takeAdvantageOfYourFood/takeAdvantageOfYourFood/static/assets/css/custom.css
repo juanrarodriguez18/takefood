@@ -171,6 +171,9 @@
 	width: 130px !important;
 }
 
+.photo-title{
+	width: 9.333333% !important;
+}
 @media (min-width: 1000px) {
 	.recipe-container .second-column-title h3 {
 		text-align: right !important;

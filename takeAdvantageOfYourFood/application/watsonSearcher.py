@@ -29,6 +29,7 @@ def watson_dir_search(images_path, exapmle_id):
 		iam_apikey=os.environ.get('WATSON_API_KEY'))
 	
 	result = []
+	recipe_result = []
 	images_path = os.path.join(images_path, exapmle_id)
 	images_files = [f for f in listdir(images_path) if isfile(join(images_path, f))]
 	#print(images_files)
@@ -47,7 +48,10 @@ def watson_dir_search(images_path, exapmle_id):
 					break
 		if recipe.ingredients_quantity == i:
 			print("{\"ID\": "+str(recipe.recipe_id)+", \"Name\": \""+recipe.name+"\"}")
-			result.append(recipe)
+			recipe_result.append(recipe)
+
+	result.append(ingredients_results)
+	result.append(recipe_result)
 
 	return result
 	
@@ -81,6 +85,7 @@ def watson_upload_search(images_files):
 		iam_apikey=os.environ.get('WATSON_API_KEY'))
 	
 	result = []
+	recipe_result = []
 	#print(images_files)
 	ingredients_results = get_watson_upload_ingredients_results(visual_recognition, images_files)
 	print(ingredients_results)
@@ -97,7 +102,10 @@ def watson_upload_search(images_files):
 					break
 		if recipe.ingredients_quantity == i:
 			print("{\"ID\": "+str(recipe.recipe_id)+", \"Name\": \""+recipe.name+"\"}")
-			result.append(recipe)
+			recipe_result.append(recipe)
+
+	result.append(ingredients_results)
+	result.append(recipe_result)
 
 	return result
 	

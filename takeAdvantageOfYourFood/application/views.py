@@ -34,16 +34,16 @@ def test(request):
 def example1(request):
     images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'ingredientsImages')
     exapmle_id = '18'
-    recipes = watson_dir_search(images_path, exapmle_id)
-
-    return render(request, 'recipes.html', {'recipes': recipes})
+    result = watson_dir_search(images_path, exapmle_id)
+    print("Results: "+str(result[0]))
+    return render(request, 'recipes.html', {'watson_results': result[0], 'recipes': result[1]})
     
 def example2(request):
     images_path = os.path.join('takeAdvantageOfYourFood', 'static', 'ingredientsImages')
     exapmle_id = '32'
-    recipes = watson_dir_search(images_path, exapmle_id)
+    result = watson_dir_search(images_path, exapmle_id)
 
-    return render(request, 'recipes.html', {'recipes': recipes})
+    return render(request, 'recipes.html', {'watson_results': result[0], 'recipes': result[1]})
 
 def get_recipe(request, recipe_id):
     print(recipe_id)
@@ -75,10 +75,7 @@ def list_ingredient(request):
 
     return render(request, 'ingredients.html', {'ingredients': result})
 
-def Form(request):
-    return render(request, "form.html")
-
 def Upload(request):
-    recipes = watson_upload_search(request.FILES.getlist("files"))
+    result = watson_upload_search(request.FILES.getlist("files"))
 
-    return render(request, 'recipes.html', {'recipes': recipes})
+    return render(request, 'recipes.html', {'watson_results': result[0], 'recipes': result[1]})
