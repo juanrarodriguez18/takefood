@@ -1,5 +1,24 @@
 # TakeFood
-Take advantage of your food!
+
+<img src="takeAdvantageOfYourFood/takeAdvantageOfYourFood/static/images/logo-rounded.png" width="120px">
+
+**Take Advantage of your Food!**
+
+Your favourite recipe searcher! With this web app you can upload your ingredients and the app will search in our bd for show you the recipes that has those or less of the ingredients that you have uploaded. 
+
+Powered by [IBM Watson Visual Recognition](https://www.ibm.com/watson/services/visual-recognition/).
+
+## Populating the Database
+
+First at all, we need to populate the database. For default the database is populated, but if you want to change the data, you can do it.
+
+For populate the database, we need to run the command:
+
+```bat
+pip install -r requirements.txt
+python takeAdvantageOfYourFood/manage.py populateDatabase
+```
+This command will call the Python class "[populateDatabase.py](https://github.com/juanrarodriguez18/takefood/blob/master/takeAdvantageOfYourFood/application/management/commands/populateDatabase.py)" wich clean all the data in the database, takes the data from the csv files on folder "csv" and insert this data into the database.
 
 ## Deploying the App
 
